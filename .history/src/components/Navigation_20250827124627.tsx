@@ -19,15 +19,12 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
             <span className="text-white hidden md:block">
-              <a href="/">
-                <img
-                  src={junctionLogo}
-                  alt="JunctionLogo"
-                  width={200}
-                  height={200}
-                  className="filter invert sepia saturate-200 hue-rotate-90"
-                />
-              </a>
+              <img
+                src={junctionLogo}
+                alt="JunctionLogo"
+                width={200}
+                className="filter invert sepia saturate-200 hue-rotate-90"
+              />
             </span>
           </div>
 

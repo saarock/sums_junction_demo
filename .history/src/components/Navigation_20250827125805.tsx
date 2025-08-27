@@ -24,7 +24,7 @@ export function Navigation() {
                   src={junctionLogo}
                   alt="JunctionLogo"
                   width={200}
-                  height={200}
+                  height={100}
                   className="filter invert sepia saturate-200 hue-rotate-90"
                 />
               </a>
