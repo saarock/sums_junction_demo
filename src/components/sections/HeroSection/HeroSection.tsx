@@ -11,7 +11,7 @@ const HeroSection = () => {
         id="home"
         className="relative overflow-hidden min-h-screen flex items-center pt-16"
       >
-        <div className="absolute inset-0">
+        {/* <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-black/80 to-pink-900/70"></div>
           <div className="absolute inset-0 opacity-30">
             <div
@@ -28,10 +28,21 @@ const HeroSection = () => {
               }}
             ></div>
           </div>
+        </div> */}
+        {/* Inside your existing HeroSection JSX, keep everything else unchanged */}
+
+        <div className="hero-video">
+          <video
+            src="./videos/hero_video.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+          ></video>
         </div>
 
         <div className="relative container mx-auto px-6 py-20">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center glass-card">
             <div className="mb-8">
               <h1 className="text-6xl md:text-7xl lg:text-8xl mb-4 font-bold text-white leading-none tracking-tight">
                 Junction X
