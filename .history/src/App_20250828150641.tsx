@@ -4,6 +4,26 @@ import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 import { Navigation } from "./components/Navigation";
 import { ContactForm } from "./components/ContactForm";
 
+import {
+  Calendar,
+  MapPin,
+  Trophy,
+  Users,
+  Globe,
+  Target,
+  Handshake,
+  Star,
+  Zap,
+  Award,
+  Network,
+  Briefcase,
+  ExternalLink,
+  Code,
+  Lightbulb,
+  DollarSign,
+  UserCheck,
+  Mail,
+} from "lucide-react";
 
 import {
   EventDetails,
@@ -12,8 +32,7 @@ import {
   WhatIsJunctionX,
   WhyKathmandu,
 } from "./components/sections";
-import Footer from "./components/Footer";
-
+import { Footer } from "react-day-picker";
 
 export default function App() {
   return (
