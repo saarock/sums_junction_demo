@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Added glass morphism effects for hero section */
+.glass-card {
+  width: 300px;
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* soft white border */
+  backdrop-filter: blur(10px); /* frosted glass blur */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+  color: #000; /* black text looks good on white glass */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.input {
+  outline: 2px solid white;
+  color: black;
+  background-color: white   ;
+}
+.input:focus {
+    outline: 2px solid white;
+
+}
+
+.input:active {
+  outline: 2px solid white;
+
+
+}

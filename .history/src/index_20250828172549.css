@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Added glass morphism effects for hero section */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.input {
+  outline: white;
+}
+.input:focus {
+  outline: white;
+  border: 2px solid white;
+}
+
+.input:active {
+  outline: white;
+  border: 3px solid white;
+
+}
