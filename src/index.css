@@ -16,28 +16,22 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* optional shadow for depth */
   color: white; /* text color */
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.glass-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 2s, box-shadow 0.3s;
 }
 
 .input {
   outline: 2px solid white;
   color: black;
-  background-color: white   ;
+  background-color: white;
 }
-.input:focus {
-    outline: 2px solid white;
 
+.input:focus {
+  outline: 2px solid white;
 }
 
 .input:active {
   outline: 2px solid white;
 }
-
 
 /* Video css from hero page */
 /* HeroSectionVideo.css */
