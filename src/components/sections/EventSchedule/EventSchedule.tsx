@@ -14,8 +14,8 @@ const EventSchedule = () => {
                 backgroundImage: `
                      url("./images/one.jpg")
                     `,
-                backgroundSize: "contain",
-                // backgroundSize: "cover",
+                // backgroundSize: "contain",
+                backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             ></div>
