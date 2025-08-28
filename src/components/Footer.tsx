@@ -69,7 +69,7 @@ const Footer = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
-                    <span>March 03-05, 2025</span>
+                    <span>December 03-05, 2025</span>
                   </div>
                 </div>
               </div>

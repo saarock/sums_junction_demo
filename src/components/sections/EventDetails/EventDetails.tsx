@@ -20,7 +20,7 @@ const EventDetails = () => {
     {
       title: "Date & Time",
       items: [
-        { icon: Calendar1, label: "March 03-05, 2025", subLabel: "48 hours of non-stop innovation" },
+        { icon: Calendar1, label: "December  03-05, 2025", subLabel: "48 hours of non-stop innovation" },
         { icon: Calendar, label: "Starts Friday 10:00 AM" },
         { icon: Calendar, label: "Ends Sunday 10:00 AM" },
       ],
