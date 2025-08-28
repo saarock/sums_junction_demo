@@ -12,9 +12,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Logo
-              className="object-contain filter brightness-0 invert" // white version
-            />
+            <Logo className="object-contain filter brightness-0 invert" />
           </div>
 
           {/* Desktop Navigation */}
@@ -46,7 +44,7 @@ export function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white z-50"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -54,35 +52,43 @@ export function Navigation() {
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden py-4 border-t border-white/10">
-            <div className="flex flex-col gap-4">
+        <div
+          className={`md:hidden fixed top-16 left-0 right-0 bg-black/90 backdrop-blur-md border-t border-white/10 transition-transform duration-300 ease-in-out ${
+            isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
+          }`}
+        >
+          <div className="flex flex-col gap-6 px-6 py-6">
+            <a
+              href="#home"
+              className="text-white/80 hover:text-white text-lg transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              About
+            </a>
+            <a
+              href="#about"
+              className="text-white/80 hover:text-white text-lg transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Details
+            </a>
+            <a
+              href="#partners"
+              className="text-white/80 hover:text-white text-lg transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Sponsors
+            </a>
+            <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 w-full">
               <a
-                href="#home"
-                className="text-white/80 hover:text-white transition-colors"
+                href="mailto:manish.khadka@cogknit.io?subject=Sponsor"
+                onClick={() => setIsOpen(false)}
               >
-                About
+                Contact
               </a>
-              <a
-                href="#about"
-                className="text-white/80 hover:text-white transition-colors"
-              >
-                Details
-              </a>
-              <a
-                href="#partners"
-                className="text-white/80 hover:text-white transition-colors"
-              >
-                Sponsors
-              </a>
-              <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 w-fit cursor-pointer">
-                <a href="mailto:manish.khadka@cogknit.io?subject=Sponsor">
-                  Contact
-                </a>
-              </Button>
-            </div>
+            </Button>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );
