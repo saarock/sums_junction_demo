@@ -7,6 +7,7 @@ import junctionLogo from "../assets/junctionLogo.png";
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {

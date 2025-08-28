@@ -29,6 +29,7 @@ import sumsLogo from "./assets/cogknitLogo.jpg";
 import hackathonBackground from "./assets/cogknitLogo.jpg";
 import "./styles/globals.css";
 
+
 export default function App() {
   return (
     <div className="min-h-screen bg-background relative">
@@ -62,7 +63,8 @@ export default function App() {
               </div>
 
               <h1 className="text-4xl md:text-6xl lg:text-7xl mb-8 bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent leading-tight">
-                Where Nepalese Innovation Meets Finnish Entreprenurial Spirit ✨
+                Where Nepalese Innovation Meets Finnish
+                Entreprenurial Spirit ✨
               </h1>
 
               <div className="glass-subtle rounded-2xl p-6 md:p-8 mb-8">
@@ -70,7 +72,8 @@ export default function App() {
                   Main Hackathon + InnoFest
                 </p>
                 <p className="text-lg md:text-xl text-purple-300 mb-4">
-                  Leading Hackathon from Finland, First Time in Nepal.
+                  Leading Hackathon from Finland, First Time in
+                  Nepal.
                 </p>
                 <p className="text-lg text-white/80"></p>
               </div>
@@ -78,11 +81,15 @@ export default function App() {
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <div className="glass rounded-full px-6 py-3 flex items-center gap-2 hover:scale-105 transition-all duration-300">
                   <Calendar className="w-5 h-5 text-purple-400" />
-                  <span className="text-white/90">Dec 5-7, 2025</span>
+                  <span className="text-white/90">
+                    Dec 5-7, 2025
+                  </span>
                 </div>
                 <div className="glass rounded-full px-6 py-3 flex items-center gap-2 hover:scale-105 transition-all duration-300">
                   <MapPin className="w-5 h-5 text-blue-400" />
-                  <span className="text-white/90">Kathmandu</span>
+                  <span className="text-white/90">
+                    Kathmandu
+                  </span>
                 </div>
                 {/* <div className="glass rounded-full px-6 py-3 flex items-center gap-2 hover:scale-105 transition-all duration-300">
                   <Users className="w-5 h-5 text-green-400" />
@@ -93,8 +100,8 @@ export default function App() {
               </div>
 
               <p className="text-lg mb-8 text-white/70">
-                This is more than a hackathon. It's a movement. And you can be
-                part of building it.
+                This is more than a hackathon. It's a movement.
+                And you can be part of building it.
               </p>
 
               <Button
@@ -142,7 +149,9 @@ export default function App() {
                         className="h-12 md:h-16 mx-auto object-contain filter contrast-125"
                       />
                     </div>
-                    <p className="text-white/80 text-lg">Cogknit Oy</p>
+                    <p className="text-white/80 text-lg">
+                      Cogknit Oy
+                    </p>
                   </div>
                 </div>
                 <div className="group cursor-pointer text-center">
@@ -154,7 +163,9 @@ export default function App() {
                         className="h-16 md:h-20 mx-auto object-contain filter contrast-125"
                       />
                     </div>
-                    <p className="text-white/80 text-lg">SUMS Nepal</p>
+                    <p className="text-white/80 text-lg">
+                      SUMS Nepal
+                    </p>
                   </div>
                 </div>
                 <div className="group cursor-pointer text-center">
@@ -196,13 +207,15 @@ export default function App() {
             {/* Official Junction Brand Text */}
             <div className="glass-card rounded-3xl p-6 mb-8 max-w-4xl mx-auto">
               <p className="text-lg text-white/90 leading-relaxed">
-                Junction is a global hackathon and tech community, spreading the
-                word of empowering people to create with technology. The
-                JunctionX program was created for local tech communities around
-                the world to have a way to create their own hackathon, and bring
-                developers, designers and all other techies together. All
-                JunctionX events are individual events created by the local
-                community, supported by Junction.
+                Junction is a global hackathon and tech
+                community, spreading the word of empowering
+                people to create with technology. The JunctionX
+                program was created for local tech communities
+                around the world to have a way to create their
+                own hackathon, and bring developers, designers
+                and all other techies together. All JunctionX
+                events are individual events created by the
+                local community, supported by Junction.
               </p>
             </div>
 
@@ -226,19 +239,25 @@ export default function App() {
                     <div className="text-4xl mb-2 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                       2500+
                     </div>
-                    <div className="text-white/70">Projects</div>
+                    <div className="text-white/70">
+                      Projects
+                    </div>
                   </div>
                   <div className="text-center glass-subtle rounded-2xl p-4 hover:scale-105 transition-all duration-300">
                     <div className="text-4xl mb-2 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                       20K+
                     </div>
-                    <div className="text-white/70">Participants</div>
+                    <div className="text-white/70">
+                      Participants
+                    </div>
                   </div>
                   <div className="text-center glass-subtle rounded-2xl p-4 hover:scale-105 transition-all duration-300">
                     <div className="text-4xl mb-2 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                       107
                     </div>
-                    <div className="text-white/70">Nationalities</div>
+                    <div className="text-white/70">
+                      Nationalities
+                    </div>
                   </div>
                 </div>
 
@@ -246,7 +265,10 @@ export default function App() {
                 <Button
                   className="glass-button border-0 text-white hover:scale-105 transition-all duration-300"
                   onClick={() =>
-                    window.open("https://hackjunction.com", "_blank")
+                    window.open(
+                      "https://hackjunction.com",
+                      "_blank",
+                    )
                   }
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
@@ -276,7 +298,10 @@ export default function App() {
       {/* <HowToApply /> */}
 
       {/* Partnership Section - Completely Redesigned for Sponsors */}
-      <section id="partners" className="py-20 relative overflow-hidden">
+      <section
+        id="partners"
+        className="py-20 relative overflow-hidden"
+      >
         {/* Dynamic Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/15 via-black/30 to-blue-900/15"></div>
@@ -305,10 +330,18 @@ export default function App() {
                   animationDuration: `${4 + Math.random() * 3}s`,
                 }}
               >
-                {i % 4 === 0 && <Trophy className="w-4 h-4 text-yellow-400" />}
-                {i % 4 === 1 && <Star className="w-3 h-3 text-blue-400" />}
-                {i % 4 === 2 && <Zap className="w-4 h-4 text-purple-400" />}
-                {i % 4 === 3 && <Target className="w-3 h-3 text-green-400" />}
+                {i % 4 === 0 && (
+                  <Trophy className="w-4 h-4 text-yellow-400" />
+                )}
+                {i % 4 === 1 && (
+                  <Star className="w-3 h-3 text-blue-400" />
+                )}
+                {i % 4 === 2 && (
+                  <Zap className="w-4 h-4 text-purple-400" />
+                )}
+                {i % 4 === 3 && (
+                  <Target className="w-3 h-3 text-green-400" />
+                )}
               </div>
             ))}
           </div>
@@ -342,9 +375,9 @@ export default function App() {
               </h2>
 
               <p className="text-2xl md:text-3xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-12">
-                Connect with Nepal's brightest tech talent and amplify your
-                brand to 200+ innovators, media coverage, and global exposure!
-                🚀
+                Connect with Nepal's brightest tech talent and
+                amplify your brand to 200+ innovators, media
+                coverage, and global exposure! 🚀
               </p>
 
               {/* Key Sponsor Metrics */}
@@ -384,10 +417,14 @@ export default function App() {
                       <IconComponent
                         className={`w-10 h-10 mx-auto ${metric.color}`}
                       />
-                      <div className={`text-3xl mb-1 ${metric.color}`}>
+                      <div
+                        className={`text-3xl mb-1 ${metric.color}`}
+                      >
                         {metric.value}
                       </div>
-                      <div className="text-white/70">{metric.label}</div>
+                      <div className="text-white/70">
+                        {metric.label}
+                      </div>
                     </div>
                   );
                 })}
@@ -413,7 +450,9 @@ export default function App() {
                     <h3 className="text-2xl text-white mb-2">
                       Challenge Owner
                     </h3>
-                    <p className="text-purple-300 text-lg">Drive Innovation</p>
+                    <p className="text-purple-300 text-lg">
+                      Drive Innovation
+                    </p>
                   </div>
 
                   <div className="mb-6">
@@ -446,9 +485,7 @@ export default function App() {
                   </div>
 
                   <Button className="w-full glass-button text-lg py-4 rounded-2xl border-0 text-white hover:scale-105 transition-all duration-300">
-                    <a href="mailto:manish.khadka@sumsnepal">
-                      Be Challenge Owner
-                    </a>
+                    Be Challenge Owner
                   </Button>
                 </div>
               </div>
@@ -467,8 +504,12 @@ export default function App() {
 
                   <div className="glass-subtle rounded-3xl p-6 mb-6 text-center">
                     <Briefcase className="w-16 h-16 text-blue-400 mx-auto mb-3" />
-                    <h3 className="text-2xl text-white mb-2">Event Sponsor</h3>
-                    <p className="text-blue-300 text-lg">Maximum Impact</p>
+                    <h3 className="text-2xl text-white mb-2">
+                      Event Sponsor
+                    </h3>
+                    <p className="text-blue-300 text-lg">
+                      Maximum Impact
+                    </p>
                   </div>
 
                   <div className="mb-6">
@@ -499,13 +540,9 @@ export default function App() {
                     ))}
                   </div>
 
-                  <Button
-                    asChild
-                    className="w-full glass-button text-lg py-4 rounded-2xl border-0 text-white hover:scale-105 transition-all duration-300 bg-gradient-to-r from-blue-500/20 to-cyan-500/20"
-                  >
-                    <a href="mailto:manish.khadka@sumsnepal">
-                      Choose Sponsor Tier
-                    </a>
+<a href="mailto:manish.khadka@sumsnepal"></a>
+                  <Button className="w-full glass-button text-lg py-4 rounded-2xl border-0 text-white hover:scale-105 transition-all duration-300 bg-gradient-to-r from-blue-500/20 to-cyan-500/20">
+                    Choose Sponsor Tier
                   </Button>
                 </div>
               </div>
@@ -530,7 +567,9 @@ export default function App() {
                     <h3 className="text-2xl text-white mb-2">
                       InnoFest Partner
                     </h3>
-                    <p className="text-green-300 text-lg">Global Reach</p>
+                    <p className="text-green-300 text-lg">
+                      Global Reach
+                    </p>
                   </div>
 
                   <div className="mb-6">
@@ -562,9 +601,7 @@ export default function App() {
                   </div>
 
                   <Button className="w-full glass-button text-lg py-4 rounded-2xl border-0 text-white hover:scale-105 transition-all duration-300">
-                    <a href="mailto:manish.khadka@sumsnepal">
-                      Support InnoFest
-                    </a>
+                    Support InnoFest
                   </Button>
                 </div>
               </div>
@@ -625,7 +662,9 @@ export default function App() {
                         <h4 className="text-xl text-white mb-3">
                           {reason.title}
                         </h4>
-                        <p className="text-white/70">{reason.description}</p>
+                        <p className="text-white/70">
+                          {reason.description}
+                        </p>
                       </div>
                     );
                   })}
@@ -633,9 +672,9 @@ export default function App() {
 
                 <div className="text-center">
                   <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto">
-                    Join global brands investing in Nepal's tech future. Limited
-                    sponsorship slots available - secure your partnership today!
-                    ⚡
+                    Join global brands investing in Nepal's tech
+                    future. Limited sponsorship slots available
+                    - secure your partnership today! ⚡
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -643,9 +682,11 @@ export default function App() {
                       size="lg"
                       className="glass-button text-xl px-12 py-6 rounded-2xl border-0 text-white hover:scale-110 transition-all duration-300 animate-pulse"
                       onClick={() =>
-                        document.getElementById("contact")?.scrollIntoView({
-                          behavior: "smooth",
-                        })
+                        document
+                          .getElementById("contact")
+                          ?.scrollIntoView({
+                            behavior: "smooth",
+                          })
                       }
                     >
                       <Handshake className="w-6 h-6 mr-3" />
@@ -705,7 +746,9 @@ export default function App() {
                 <div className="glass-subtle rounded-2xl p-4 w-fit mx-auto mb-6">
                   <Trophy className="w-12 h-12 text-yellow-400" />
                 </div>
-                <h3 className="text-xl mb-4 text-white">Cash Prizes 💰</h3>
+                <h3 className="text-xl mb-4 text-white">
+                  Cash Prizes 💰
+                </h3>
                 <p className="text-white/70 leading-relaxed">
                   Cash prizes for winners & runner-ups
                 </p>
@@ -715,9 +758,12 @@ export default function App() {
                 <div className="glass-subtle rounded-2xl p-4 w-fit mx-auto mb-6">
                   <Zap className="w-12 h-12 text-purple-400" />
                 </div>
-                <h3 className="text-xl mb-4 text-white">Pre-Incubation 🚀</h3>
+                <h3 className="text-xl mb-4 text-white">
+                  Pre-Incubation 🚀
+                </h3>
                 <p className="text-white/70 leading-relaxed">
-                  3-month pre-incubation program for the top 3 teams
+                  3-month pre-incubation program for the top 3
+                  teams
                 </p>
               </div>
 
@@ -725,10 +771,12 @@ export default function App() {
                 <div className="glass-subtle rounded-2xl p-4 w-fit mx-auto mb-6">
                   <Star className="w-12 h-12 text-blue-400" />
                 </div>
-                <h3 className="text-xl mb-4 text-white">Golden Ticket ✈️</h3>
+                <h3 className="text-xl mb-4 text-white">
+                  Golden Ticket ✈️
+                </h3>
                 <p className="text-white/70 leading-relaxed">
-                  Golden Ticket to JUNCTION 2026 Main Event in Finland for the
-                  final winner
+                  Golden Ticket to JUNCTION 2026 Main Event in
+                  Finland for the final winner
                 </p>
               </div>
 
@@ -736,9 +784,12 @@ export default function App() {
                 <div className="glass-subtle rounded-2xl p-4 w-fit mx-auto mb-6">
                   <Users className="w-12 h-12 text-green-400" />
                 </div>
-                <h3 className="text-xl mb-4 text-white">Plus More! ✨</h3>
+                <h3 className="text-xl mb-4 text-white">
+                  Plus More! ✨
+                </h3>
                 <p className="text-white/70 leading-relaxed">
-                  Exclusive perks, resources & networking opportunities
+                  Exclusive perks, resources & networking
+                  opportunities
                 </p>
               </div>
             </div>
@@ -847,9 +898,9 @@ export default function App() {
                 Let's Connect! 💬
               </h2>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Got questions? Want to partner with us? Just want to say hi?
-                We'd love to hear from you! Drop us a message and let's make
-                some magic happen ✨
+                Got questions? Want to partner with us? Just
+                want to say hi? We'd love to hear from you! Drop
+                us a message and let's make some magic happen ✨
               </p>
             </div>
 
@@ -964,8 +1015,8 @@ export default function App() {
                 </span>
               </div>
               <p className="text-white/70 mb-6 leading-relaxed">
-                Brought to you by SUMS Nepal & King's College Nepal | Powered by
-                Cogknit Oy
+                Brought to you by SUMS Nepal & King's College
+                Nepal | Powered by Cogknit Oy
               </p>
               <div className="flex justify-center gap-6">
                 <Button

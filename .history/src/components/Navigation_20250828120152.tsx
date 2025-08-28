@@ -1,11 +1,12 @@
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import junctionLogo from "../assets/junctionLogo.png";
 // saarock will be loaded dynamically in useEffect
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);

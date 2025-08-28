@@ -446,9 +446,7 @@ export default function App() {
                   </div>
 
                   <Button className="w-full glass-button text-lg py-4 rounded-2xl border-0 text-white hover:scale-105 transition-all duration-300">
-                    <a href="mailto:manish.khadka@sumsnepal">
-                      Be Challenge Owner
-                    </a>
+                    Be Challenge Owner
                   </Button>
                 </div>
               </div>
@@ -562,9 +560,7 @@ export default function App() {
                   </div>
 
                   <Button className="w-full glass-button text-lg py-4 rounded-2xl border-0 text-white hover:scale-105 transition-all duration-300">
-                    <a href="mailto:manish.khadka@sumsnepal">
-                      Support InnoFest
-                    </a>
+                    Support InnoFest
                   </Button>
                 </div>
               </div>
