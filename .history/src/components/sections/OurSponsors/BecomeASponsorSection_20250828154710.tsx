@@ -7,7 +7,7 @@ const BecomeASponsorSection = () => {
       {/* Become a Sponsor Section */}
       <div className="glass-card rounded-3xl p-12 max-w-4xl mx-auto flex justify-center items-center flex-col">
         <h3 className="text-3xl mb-4 text-white font-bold">Become a Sponsor</h3>
-        <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto text-center">
+        <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto flex justify-center items-center">
           Join our mission to empower the next generation of tech innovators in
           Nepal. Get your brand in front of 200+ talented developers and
           entrepreneurs.

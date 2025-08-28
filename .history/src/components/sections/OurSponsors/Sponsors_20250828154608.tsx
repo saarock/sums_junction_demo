@@ -138,11 +138,13 @@ const Sponsors = () => {
               <Button className="w-full glass-button py-3 rounded-xl border-0 text-white hover:scale-105 transition-all duration-300">
                 Support InnoFest
               </Button>
+                    {/* Become a Sponsor Section */}
+          <BecomeASponsorSection />
             </div>
           </div>
-          {/* Become a Sponsor Section */}
-          <BecomeASponsorSection />
+    
         </div>
+        
       </section>
     </>
   );

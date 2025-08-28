@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { Button } from "./ui/button"
 import { Menu, X } from "lucide-react"
-import Logo from "./Logo"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -11,10 +10,11 @@ export function Navigation() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
-           <Logo 
-            className="object-contain filter brightness-0 invert" // white version
-           />
+          <div className="flex items-center gap-3">
+            <div className="glass-subtle rounded-full p-2">
+              <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"></div>
+            </div>
+            <span className="text-xl font-bold text-white">Junction X</span>
           </div>
 
           {/* Desktop Navigation */}

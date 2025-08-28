@@ -11,7 +11,10 @@ export function Navigation() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center gap-3">
+            <div className="glass-subtle rounded-full p-2">
+              <div className="w-6 h-6 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full"></div>
+            </div>
            <Logo 
             className="object-contain filter brightness-0 invert" // white version
            />

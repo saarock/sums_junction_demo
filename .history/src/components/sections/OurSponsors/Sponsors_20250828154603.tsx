@@ -140,9 +140,10 @@ const Sponsors = () => {
               </Button>
             </div>
           </div>
-          {/* Become a Sponsor Section */}
-          <BecomeASponsorSection />
+    
         </div>
+              {/* Become a Sponsor Section */}
+          <BecomeASponsorSection />
       </section>
     </>
   );
