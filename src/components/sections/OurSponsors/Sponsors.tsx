@@ -28,7 +28,7 @@ const Sponsors = () => {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black/40 to-pink-900/20"></div>
           <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-blue-500/15 to-cyan-500/15 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-green-500/15 to-green-500/15 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
