@@ -35,7 +35,7 @@ const WhyKathmandu = () => {
               <div className="relative">
                 <div className="glass-card rounded-2xl p-8 text-center">
                   <img
-                    src="./images/one.jpg"
+                    src="./images/three.webp"
                     alt="Participants Expected"
                     className="w-full rounded-xl mb-4"
                   />

@@ -5,6 +5,22 @@ const EventSchedule = () => {
   return (
     <>
       <section className="py-20 relative">
+         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-black/80 to-pink-900/70"></div>
+          <div className="absolute inset-0 opacity-30">
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `
+                     url("./images/one.jpg")
+                    `,
+                backgroundSize: "contain",
+                // backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            ></div>
+          </div>
+        </div>
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl mb-8 text-white font-bold">
