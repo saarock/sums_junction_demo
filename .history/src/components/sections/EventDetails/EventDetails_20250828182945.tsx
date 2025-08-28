@@ -1,5 +1,3 @@
-import React from "react";
-import { Button } from "../../ui/button";
 import { Award, Calendar, Calendar1, Globe, MapPin, Trophy } from "lucide-react";
 import EventSchedule from "../EventSchedule/EventSchedule";
 import ReadytoJoin from "../ReadytoJoin/ReadytoJoin";
@@ -65,12 +63,12 @@ const EventDetails = () => {
                           {item.icon ? (
                             <item.icon className={`w-4 h-4 text-${card.bulletColor.replace('bg-','')} flex-shrink-0`} />
                           ) : (
-                            <div className={`w-2 h-2 rounded-full ${card.bulletColor} flex-shrink-0 mt-1`}></div>
+                            <div className={`w-2 h-2 rounded-full ${card.bulletColor} flex-shrink-0`}></div>
                           )}
                           <span className="text-white/90">{item.label}</span>
                         </div>
                         {item.subLabel && (
-                          <span className="ml-0 text-white/60 text-sm block mt-0.5 text-left">
+                          <span className="text-white/60 text-sm block ml-0">
                             {item.subLabel}
                           </span>
                         )}
@@ -90,4 +88,4 @@ const EventDetails = () => {
   );
 };
 
-export default EventDetails;  
+export default EventDetails;

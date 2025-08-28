@@ -25,8 +25,7 @@ const PartnerLogos = () => {
             <div className="text-center mb-12">
               <h3 className="text-2xl md:text-3xl text-white/90 mb-8">
                 Proudly Organized By
-              </h3>
-              <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-8 lg:gap-12 max-w-4xl mx-auto">
+              </h3>flex flex-wrap items-center justify-center gap-8 lg:gap-12 max-w-4xl mx-auto md:flex-colgap-8 lg:gap-12 flex items-center justify-center max-w-4xl mx-auto md:flex-col">
                 {/* <div className="group cursor-pointer text-center">
                   <div className="glass-card rounded-3xl p-6 md:p-8 hover:scale-105 transition-all duration-500">
                     <div className="bg-white rounded-2xl p-6 mb-4 shadow-lg">

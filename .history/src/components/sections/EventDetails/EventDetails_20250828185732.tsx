@@ -70,7 +70,7 @@ const EventDetails = () => {
                           <span className="text-white/90">{item.label}</span>
                         </div>
                         {item.subLabel && (
-                          <span className="ml-0 text-white/60 text-sm block mt-0.5 text-left">
+                          <span className="ml-6 text-white/60 text-sm block mt-0.5">
                             {item.subLabel}
                           </span>
                         )}
@@ -90,4 +90,4 @@ const EventDetails = () => {
   );
 };
 
-export default EventDetails;  
+export default EventDetails;

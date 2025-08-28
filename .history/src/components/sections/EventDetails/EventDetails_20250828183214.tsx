@@ -1,6 +1,11 @@
-import React from "react";
-import { Button } from "../../ui/button";
-import { Award, Calendar, Calendar1, Globe, MapPin, Trophy } from "lucide-react";
+import {
+  Award,
+  Calendar,
+  Calendar1,
+  Globe,
+  MapPin,
+  Trophy,
+} from "lucide-react";
 import EventSchedule from "../EventSchedule/EventSchedule";
 import ReadytoJoin from "../ReadytoJoin/ReadytoJoin";
 
@@ -20,7 +25,11 @@ const EventDetails = () => {
     {
       title: "Date & Time",
       items: [
-        { icon: Calendar1, label: "March 03-05, 2025", subLabel: "48 hours of non-stop innovation" },
+        {
+          icon: Calendar1,
+          label: "March 03-05, 2025",
+          subLabel: "48 hours of non-stop innovation",
+        },
         { icon: Calendar, label: "Starts Friday 10:00 AM" },
         { icon: Calendar, label: "Ends Sunday 10:00 AM" },
       ],
@@ -29,9 +38,21 @@ const EventDetails = () => {
     {
       title: "What's Provided",
       items: [
-        { icon: Globe, label: "High-Speed Internet", subLabel: "Blazing fast WiFi throughout the venue" },
-        { icon: Trophy, label: "Food & Drinks", subLabel: "Meals, snacks, and beverages provided" },
-        { icon: Award, label: "Swag & Prizes", subLabel: "Exclusive t-shirts and amazing prizes" },
+        {
+          icon: Globe,
+          label: "High-Speed Internet",
+          subLabel: "Blazing fast WiFi throughout the venue",
+        },
+        {
+          icon: Trophy,
+          label: "Food & Drinks",
+          subLabel: "Meals, snacks, and beverages provided",
+        },
+        {
+          icon: Award,
+          label: "Swag & Prizes",
+          subLabel: "Exclusive t-shirts and amazing prizes",
+        },
       ],
       bulletColor: "bg-orange-400",
     },
@@ -51,30 +72,35 @@ const EventDetails = () => {
 
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {cards.map((card, idx) => (
-                <div
-                  key={idx}
-                  className="glass-card rounded-2xl p-6 text-left"
-                >
+                <div key={idx} className="glass-card rounded-2xl p-6 text-left">
                   <h3 className="text-xl mb-4 text-white font-semibold">
                     {card.title}
                   </h3>
                   <div className="space-y-3">
                     {card.items.map((item, i) => (
-                      <div key={i} className="flex flex-col">
-                        <div className="flex items-center gap-2">
-                          {item.icon ? (
-                            <item.icon className={`w-4 h-4 text-${card.bulletColor.replace('bg-','')} flex-shrink-0`} />
-                          ) : (
-                            <div className={`w-2 h-2 rounded-full ${card.bulletColor} flex-shrink-0 mt-1`}></div>
-                          )}
-                          <span className="text-white/90">{item.label}</span>
+                      <>
+                        <div key={i} className="flex flex-col">
+                          <div className="flex items-center gap-2">
+                            {item.icon ? (
+                              <item.icon
+                                className={`w-4 h-4 text-${card.bulletColor.replace(
+                                  "bg-",
+                                  ""
+                                )} flex-shrink-0`}
+                              />
+                            ) : (
+                              <div
+                                className={`w-2 h-2 rounded-full ${card.bulletColor} flex-shrink-0`}
+                              ></div>
+                            )}
+                            <span className="text-white/90">{item.label}</span>
+                          </div>
                         </div>
-                        {item.subLabel && (
-                          <span className="ml-0 text-white/60 text-sm block mt-0.5 text-left">
-                            {item.subLabel}
-                          </span>
-                        )}
-                      </div>
+
+                        <div className="text-white/60 text-sm block m-0.3\">
+                          {item.subLabel}
+                        </div>
+                      </>
                     ))}
                   </div>
                 </div>
@@ -90,4 +116,4 @@ const EventDetails = () => {
   );
 };
 
-export default EventDetails;  
+export default EventDetails;

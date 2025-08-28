@@ -9,7 +9,7 @@ body {
 .glass-card {
   padding: 2rem;
   border-radius: 20px;
-  background: rgba(0, 0, 0, 0.296); /* fully transparent */
+  background-color: black; /* fully transparent */
   border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border for glass edge */
   backdrop-filter: blur(10px); /* blur background behind the card */
   -webkit-backdrop-filter: blur(10px); /* for Safari */
