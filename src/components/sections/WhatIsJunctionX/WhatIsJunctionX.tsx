@@ -13,7 +13,7 @@ const WhatIsJunctionX = () => {
   return (
     <>
       {/* What is Junction X Section */}
-      <section className="py-20 relative">
+      <section className="py-20 relative" id="about">
         <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-purple-900/10 to-black/0"></div>
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
