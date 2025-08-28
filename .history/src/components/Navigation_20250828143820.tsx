@@ -31,7 +31,7 @@ export function Navigation() {
               Sponsors
             </a>
             <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0">
-              Contact Us
+              Register Now
             </Button>
           </div>
 

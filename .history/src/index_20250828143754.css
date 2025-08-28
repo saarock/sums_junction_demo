@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  /* height: 100rem; */
+  scroll-behavior: smooth;
+}
+
