@@ -1,10 +1,4 @@
-import {
-  Award,
-  Calendar,
-  Globe,
-  MapPin,
-  Trophy,
-} from "lucide-react";
+import { Award, Calendar, Globe, MapPin, Trophy } from "lucide-react";
 import EventSchedule from "../EventSchedule/EventSchedule";
 import ReadytoJoin from "../ReadytoJoin/ReadytoJoin";
 import UnderLineStyle from "../../UnderLineStyle";
@@ -23,9 +17,13 @@ const EventDetails = () => {
       color: "purple",
     },
     {
-      title: "Date & Time",
+      title: "Hacking Date & Time",
       items: [
-        { icon: Calendar, label: "December 05-07, 2025", subLabel: "36 hours of non-stop innovation" },
+        {
+          icon: Calendar,
+          label: "December 05-07, 2025",
+          subLabel: "36 hours of non-stop innovation",
+        },
         { icon: Calendar, label: "Hackathon Starts Friday 6:00 PM" },
         { icon: Calendar, label: "Hackathon Ends Sunday 6:00 AM" },
       ],
@@ -34,16 +32,33 @@ const EventDetails = () => {
     {
       title: "What's Provided in Hackathon",
       items: [
-        { icon: Globe, label: "High-Speed Internet", subLabel: "Blazing fast WiFi throughout the venue" },
-        { icon: Trophy, label: "Food & Drinks", subLabel: "Meals, snacks, and beverages provided" },
-        { icon: Award, label: "Swag & Prizes", subLabel: "Exclusive merch and amazing prizes" },
+        {
+          icon: Globe,
+          label: "High-Speed Internet",
+          subLabel: "Blazing fast WiFi throughout the venue",
+        },
+        {
+          icon: Trophy,
+          label: "Food & Drinks",
+          subLabel: "Meals, snacks, and beverages provided",
+        },
+        {
+          icon: Award,
+          label: "Swag & Prizes",
+          subLabel: "Exclusive merch and amazing prizes",
+        },
       ],
       color: "orange",
     },
     {
       title: "InnoFest Side Event",
       items: [
-        { icon: Calendar, label: "December 06-07, 2025", subLabel: "2 days of entrepreneurial showcases, pitching, workshops, mentoring, and networking opportunities" },
+        {
+          icon: Calendar,
+          label: "December 06-07, 2025",
+          subLabel:
+            "2 days of entrepreneurial showcases, pitching, workshops, inspirational keynote speeches, mentoring sessions, bootcamps, networking, skilling and career opportunities, including higher education in Finland and many more!",
+        },
         { icon: Calendar, label: "InnoFest Starts Saturday 9:00 AM" },
         { icon: Calendar, label: "InnoFest Ends Sunday 6:00 PM" },
       ],
@@ -88,7 +103,9 @@ const EventDetails = () => {
                     <h3 className="text-2xl mb-2 text-white font-bold tracking-tight group-hover:text-white/90 transition-colors duration-300">
                       {card.title}
                     </h3>
-                    <div className={`w-12 h-0.5 bg-${card.color}-400 rounded-full opacity-60 group-hover:w-16 transition-all duration-300`}></div>
+                    <div
+                      className={`w-12 h-0.5 bg-${card.color}-400 rounded-full opacity-60 group-hover:w-16 transition-all duration-300`}
+                    ></div>
                   </div>
 
                   <div className="space-y-4">
@@ -97,8 +114,12 @@ const EventDetails = () => {
                         key={i}
                         className="group/item hover:bg-white/5 rounded-lg p-2 -m-2 transition-all duration-200 flex items-start gap-3"
                       >
-                        <div className={`p-2 rounded-lg bg-${card.color}-400/20 group-hover/item:bg-${card.color}-400/30 transition-colors duration-200`}>
-                          <item.icon className={`w-4 h-4 text-${card.color}-400`} />
+                        <div
+                          className={`p-2 rounded-lg bg-${card.color}-400/20 group-hover/item:bg-${card.color}-400/30 transition-colors duration-200`}
+                        >
+                          <item.icon
+                            className={`w-4 h-4 text-${card.color}-400`}
+                          />
                         </div>
                         <div className="flex-1 min-w-0">
                           <span className="text-white/90 font-medium leading-relaxed block group-hover/item:text-white transition-colors duration-200">
