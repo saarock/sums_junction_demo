@@ -45,22 +45,24 @@ const HeroSection = () => {
           <div className="max-w-4xl mx-auto text-center glass-card">
             <div className="mb-8">
               <h1 className="text-6xl md:text-7xl lg:text-8xl mb-4 font-bold text-white leading-none tracking-tight">
-                Junction X
+                JunctionX
               </h1>
               <h2 className="text-3xl md:text-4xl lg:text-5xl mb-8 text-white/90 font-light">
                 Kathmandu
               </h2>
 
               <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-12 max-w-3xl mx-auto">
-                The premier tech hackathon is coming to Kathmandu. Join 200+
-                developers, designers, and innovators for 48 hours of creation.
+                The premier Finnish tech hackathon is coming to Kathmandu with
+                InnoFest side event. Join 200+ hackers (developers, designers,
+                and innovators) and 2000+ participants for 36 hours of creation,
+                entrepreneurial showcases, and career opportunities.
               </p>
             </div>
 
             <div className="flex flex-wrap justify-center gap-8 mb-12">
               <div className="flex items-center gap-3 text-white/90">
                 <Calendar className="w-5 h-5 text-purple-400" />
-                <span className="text-lg">December 03-05, 2025</span>
+                <span className="text-lg">December 05-07,2025</span>
               </div>
               <div className="flex items-center gap-3 text-white/90">
                 <MapPin className="w-5 h-5 text-blue-400" />
@@ -68,7 +70,7 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center gap-3 text-white/90">
                 <Users className="w-5 h-5 text-green-400" />
-                <span className="text-lg">200+ Participants</span>
+                <span className="text-lg">200+ Hackers and 2000+ Participants</span>
               </div>
             </div>
 

@@ -1,5 +1,6 @@
 import { Calendar } from "lucide-react";
 import React from "react";
+import UnderLineStyle from "../../UnderLineStyle";
 
 const EventSchedule = () => {
   return (
@@ -26,8 +27,9 @@ const EventSchedule = () => {
             <h2 className="text-4xl md:text-5xl mb-8 text-white font-bold">
               Event Schedule
             </h2>
+            <UnderLineStyle/>
 
-            <div className="glass-card rounded-3xl p-16">
+            <div className="glass-card rounded-3xl p-16 mt-6">
               <div className="text-center">
                 <div className="glass-subtle rounded-full p-8 w-fit mx-auto mb-8">
                   <Calendar className="w-16 h-16 text-purple-400" />

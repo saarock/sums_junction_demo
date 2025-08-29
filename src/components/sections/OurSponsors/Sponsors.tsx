@@ -16,6 +16,7 @@ import {
   Book,
   Heart,
 } from "lucide-react";
+import UnderLineStyle from "../../UnderLineStyle";
 
 const Sponsors = () => {
   return (
@@ -34,15 +35,18 @@ const Sponsors = () => {
         <div className="container mx-auto px-6 relative z-10">
           {/* Section Title */}
           <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl mb-4 text-white font-bold">
-              Partnerships
+            <h2 className="text-4xl md:text-5xl mb-8 text-white font-bold">
+              Partner With Us
             </h2>
-            <p className="text-lg text-white/80 mb-3 max-w-2xl mx-auto">
+            <UnderLineStyle />
+            <p className="text-lg text-white/80 mb-3 max-w-2xl mx-auto mt-6">
               INVEST IN THE FUTURE OF NEPAL
             </p>
             <p className="text-lg text-white/80 mb-16 max-w-2xl mx-auto">
-              Connect with Nepal's brightest tech talent and amplify your brand
-              to 200+ innovators, media coverage, and global exposure! 🚀
+              🚀 Fuel the next wave of innovation in Nepal and put your brand in
+              the spotlight; reaching 200+ hackers, 2,000+ participants,
+              Nepalese and Finnish decision-makers, partners, and media, with
+              global buzz guaranteed!
             </p>
           </div>
 
@@ -78,14 +82,14 @@ const Sponsors = () => {
                 ))}
               </div>
 
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-xl px-12 py-6 rounded-xl border-0 hover:scale-105 transition-all duration-300 font-semibold"
-              >
-                <a href="mailto:manish.khadka@cogknit.io?subject=Challenge Owner">
-                  Be Challenge Owner
-                </a>
-              </Button>
+              <a href="mailto:manish.khadka@cogknit.io?subject=Challenge Owner">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-xl px-12 py-6 rounded-xl border-0 hover:scale-105 transition-all duration-300 font-semibold"
+                >
+                  Contact Us
+                </Button>
+              </a>
             </div>
 
             {/* Event Sponsor */}
@@ -117,14 +121,14 @@ const Sponsors = () => {
                 ))}
               </div>
 
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-xl px-12 py-6 rounded-xl border-0 hover:scale-105 transition-all duration-300 font-semibold"
-              >
-                <a href="mailto:manish.khadka@cogknit.io?subject=Event Sponsor">
-                  Choose Sponsor Tier
-                </a>
-              </Button>
+              <a href="mailto:manish.khadka@cogknit.io?subject=Event Sponsor">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-xl px-12 py-6 rounded-xl border-0 hover:scale-105 transition-all duration-300 font-semibold"
+                >
+                  Contact Us
+                </Button>
+              </a>
             </div>
 
             {/* InnoFest Partner */}
@@ -165,14 +169,14 @@ const Sponsors = () => {
                 ))}
               </div>
 
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-xl px-12 py-6 rounded-xl border-0 hover:scale-105 transition-all duration-300 font-semibold"
-              >
-                <a href="mailto:avinash.dhital@cogknit.io?subject=Event Sponsor">
-                  Support InnoFest
-                </a>
-              </Button>
+              <a href="mailto:avinash.dhital@cogknit.io?subject=Event Sponsor">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-xl px-12 py-6 rounded-xl border-0 hover:scale-105 transition-all duration-300 font-semibold"
+                >
+                  Contact Us
+                </Button>
+              </a>
             </div>
           </div>
           {/* Become a Sponsor Section */}

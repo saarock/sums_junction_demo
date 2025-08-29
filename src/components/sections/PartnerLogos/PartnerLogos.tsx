@@ -1,4 +1,5 @@
 import GradientColor from "../../GradientColor";
+import UnderLineStyle from "../../UnderLineStyle";
 
 const PartnerLogos = () => {
   const orgName = [
@@ -23,10 +24,12 @@ const PartnerLogos = () => {
         <div className="container mx-auto px-6 relative">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h3 className="text-2xl md:text-3xl text-white/90 mb-8">
+              <h2 className="text-4xl md:text-5xl mb-8 text-white font-bold">
                 Proudly Organized By
-              </h3>
-              <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-8 lg:gap-12 max-w-4xl mx-auto">
+              </h2>
+
+              <UnderLineStyle />
+              <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-8 lg:gap-12 max-w-4xl mx-auto mt-16">
                 {/* <div className="group cursor-pointer text-center">
                   <div className="glass-card rounded-3xl p-6 md:p-8 hover:scale-105 transition-all duration-500">
                     <div className="bg-white rounded-2xl p-6 mb-4 shadow-lg">

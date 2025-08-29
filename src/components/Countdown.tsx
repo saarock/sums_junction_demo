@@ -39,44 +39,45 @@ export function Countdown() {
     <div className="rounded-3xl p-8 text-center transition-all duration-500 w-full mt-16 ">
       <div className="glass-card p-12 rounded-3xl">
         <div className="mb-6">
-        <h3 className="text-orange-400 text-xl mb-2">
-          Our main event will take place in Kathmandu in 2025!
-        </h3>
-        <p className="text-white/80">
-          With tech talents from all over Nepal, you don't wanna miss it for
-          sure!
-        </p>
-      </div>
+          <h3 className="text-orange-400 text-xl mb-2">
+            ⏳ Partner slots are disappearing fast claim your place in Nepal’s
+            most ambitious innovation movement now
+          </h3>
+          <p className="text-white/80 hidden">
+            With tech talents from all over Nepal, you don't wanna miss it for
+            sure!
+          </p>
+        </div>
 
-      <div className="flex justify-center items-center gap-4 mb-8">
-        <div className="text-center">
-          <div className="text-4xl md:text-6xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-            {timeLeft.days.toString().padStart(2, "0")}
+        <div className="flex justify-center items-center gap-4 mb-8">
+          <div className="text-center">
+            <div className="text-4xl md:text-6xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+              {timeLeft.days.toString().padStart(2, "0")}
+            </div>
+            <div className="text-white/60">Days</div>
           </div>
-          <div className="text-white/60">Days</div>
-        </div>
-        <div className="text-3xl text-white/40">:</div>
-        <div className="text-center">
-          <div className="text-4xl md:text-6xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-            {timeLeft.hours.toString().padStart(2, "0")}
+          <div className="text-3xl text-white/40">:</div>
+          <div className="text-center">
+            <div className="text-4xl md:text-6xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+              {timeLeft.hours.toString().padStart(2, "0")}
+            </div>
+            <div className="text-white/60">Hours</div>
           </div>
-          <div className="text-white/60">Hours</div>
-        </div>
-        <div className="text-3xl text-white/40">:</div>
-        <div className="text-center">
-          <div className="text-4xl md:text-6xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-            {timeLeft.minutes.toString().padStart(2, "0")}
+          <div className="text-3xl text-white/40">:</div>
+          <div className="text-center">
+            <div className="text-4xl md:text-6xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+              {timeLeft.minutes.toString().padStart(2, "0")}
+            </div>
+            <div className="text-white/60">Minutes</div>
           </div>
-          <div className="text-white/60">Minutes</div>
-        </div>
-        <div className="text-3xl text-white/40">:</div>
-        <div className="text-center">
-          <div className="text-4xl md:text-6xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-            {timeLeft.seconds.toString().padStart(2, "0")}
+          <div className="text-3xl text-white/40">:</div>
+          <div className="text-center">
+            <div className="text-4xl md:text-6xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+              {timeLeft.seconds.toString().padStart(2, "0")}
+            </div>
+            <div className="text-white/60">Seconds</div>
           </div>
-          <div className="text-white/60">Seconds</div>
         </div>
-      </div>
       </div>
     </div>
   );

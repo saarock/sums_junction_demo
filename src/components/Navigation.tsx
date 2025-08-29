@@ -35,11 +35,14 @@ export function Navigation() {
             >
               Sponsors
             </a>
-            <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0">
-              <a href="mailto:manish.khadka@cogknit.io?subject=Sponsor">
-                Contact
-              </a>
-            </Button>
+            <a
+              href="mailto:manish.khadka@cogknit.io?subject=Sponsor"
+              className="h-full"
+            >
+              <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0">
+                Partner with us
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -54,7 +57,9 @@ export function Navigation() {
         {/* Mobile Navigation */}
         <div
           className={`md:hidden fixed top-16 left-0 right-0 bg-black/90 backdrop-blur-md border-t border-white/10 transition-transform duration-300 ease-in-out ${
-            isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
+            isOpen
+              ? "translate-y-0 opacity-100"
+              : "-translate-y-full opacity-0 pointer-events-none"
           }`}
         >
           <div className="flex flex-col gap-6 px-6 py-6">

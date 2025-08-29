@@ -1,6 +1,7 @@
 import { Code, DollarSign, Lightbulb, Trophy, UserCheck } from "lucide-react";
 import React, { useCallback } from "react";
 import PrimaryButton from "../../PrimaryButton";
+import UnderLineStyle from "../../UnderLineStyle";
 
 const WhatIsJunctionX = () => {
   const redirect = useCallback(() => {
@@ -34,17 +35,24 @@ const WhatIsJunctionX = () => {
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl mb-8 text-white font-bold">
-              What is Junction X?
+              What is JunctionX Kathmandu?
             </h2>
-            <p className="text-lg text-white/80 leading-relaxed mb-16 max-w-3xl mx-auto">
-              Junction X is the world's leading hackathon series, bringing
-              together the brightest minds to create innovative solutions that
-              shape the future. Now coming to Kathmandu for the first time.
+            <UnderLineStyle />
+            <p className="text-lg text-white/80 leading-relaxed mb-16 mt-6 max-w-3xl mx-auto">
+              From the heart of Finland’s innovation ecosystem to the vibrant
+              streets of Kathmandu, Junction one of the world’s largest
+              hackathons lands in Nepal for an unforgettable three-day
+              celebration of creativity, technology, and entrepreneurship. Over
+              the past 8 years, Junction has brought together 20,000+ innovators
+              and produced 2,500+ groundbreaking projects. Now, JunctionX
+              Kathmandu 2025 will ignite the dreams of the new-age Nepalese
+              youth those daring to dream big, create fearlessly, and make their
+              mark on the global stage.
             </p>
             <PrimaryButton
               onClick={redirect}
               text="
-                Explore
+                Explore Junction
            
            "
             />
@@ -56,11 +64,11 @@ const WhatIsJunctionX = () => {
                   <Code className="w-8 h-8 text-purple-400" />
                 </div>
                 <h3 className="text-xl mb-3 text-white font-semibold">
-                  48 Hours of Coding
+                  36 Hours of Hacking
                 </h3>
                 <p className="text-white/70 text-sm leading-relaxed">
-                  Non-stop development session where ideas transform into
-                  reality
+                  Non-Stop Development Session Where Ideas Transform Into
+                  Reality
                 </p>
               </div>
 
@@ -72,8 +80,8 @@ const WhatIsJunctionX = () => {
                   Innovation Focus
                 </h3>
                 <p className="text-white/70 text-sm leading-relaxed">
-                  Tackle real-world problems with cutting-edge technology
-                  solutions
+                  Tackle Real-World Problems With Cutting-Edge Technology
+                  Solutions
                 </p>
               </div>
 
@@ -85,7 +93,7 @@ const WhatIsJunctionX = () => {
                   Cash Prize
                 </h3>
                 <p className="text-white/70 text-sm leading-relaxed">
-                  Compete for Cash Prize and startup funding opportunities
+                  Compete For Cash Prizes And Startup Funding Opportunities
                 </p>
               </div>
 
@@ -97,7 +105,7 @@ const WhatIsJunctionX = () => {
                   Golden Ticket to Finland
                 </h3>
                 <p className="text-white/70 text-sm leading-relaxed">
-                  Participation in Global Hackathon in Finland
+                  Winning Team Participate At Global Hackathon In Finland
                 </p>
               </div>
             </div>
