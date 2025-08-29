@@ -1,49 +1,33 @@
-import { Calendar, Mail, MapPin, Instagram, Music2, Linkedin } from "lucide-react";
+import {
+  Calendar,
+  Mail,
+  MapPin,
+  Instagram,
+  Music2,
+  Linkedin,
+} from "lucide-react";
 import React from "react";
 
 const organizations = [
   {
-    name: "SUMS Nepal",
+    name: "JunctionX Kathmandu",
     socials: [
       {
         label: "Instagram",
         icon: Instagram,
-        url: "https://www.instagram.com/sumsnepal/",
+        url: "https://www.instagram.com/",
         hover: "hover:text-pink-400",
       },
       {
         label: "TikTok",
         icon: Music2,
-        url: "https://www.tiktok.com/@sumsnepal",
+        url: "https://www.tiktok.com/",
         hover: "hover:text-green-400",
       },
       {
         label: "LinkedIn",
         icon: Linkedin,
-        url: "https://www.linkedin.com/company/sumsnepal",
-        hover: "hover:text-blue-400",
-      },
-    ],
-  },
-  {
-    name: "Cogknit Oy",
-    socials: [
-      // {
-      //   label: "Instagram",
-      //   icon: Instagram,
-      //   url: "https://www.instagram.com/cogknit/",
-      //   hover: "hover:text-pink-400",
-      // },
-      // {
-      //   label: "TikTok",
-      //   icon: Music2,
-      //   url: "https://www.tiktok.com/@cogknit",
-      //   hover: "hover:text-green-400",
-      // },
-      {
-        label: "LinkedIn",
-        icon: Linkedin,
-        url: "https://www.linkedin.com/company/cogknit-oy/",
+        url: "https://www.linkedin.com/company/",
         hover: "hover:text-blue-400",
       },
     ],
@@ -62,7 +46,6 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto">
           {/* Responsive layout */}
           <div className="flex flex-col items-center text-center md:flex-row md:justify-between md:items-start md:text-left gap-10">
-            
             {/* Junction X Kathmandu */}
             <div className="max-w-md">
               <h3 className="text-2xl mb-4 font-bold">
@@ -70,7 +53,11 @@ const Footer = () => {
               </h3>
               <div className="flex items-center gap-2 text-white/80 mb-6">
                 <Calendar className="w-5 h-5 text-purple-400" />
-                <span className="text-lg font-medium">36 hours</span>
+                <span className="text-lg font-medium">
+                  The premier tech hackathon coming to Nepal. Join us for 36
+                  hours of innovation, collaboration and creation with the
+                  brightest minds in tech.
+                </span>
               </div>
             </div>
 

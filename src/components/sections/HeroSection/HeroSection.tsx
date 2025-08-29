@@ -70,7 +70,9 @@ const HeroSection = () => {
               </div>
               <div className="flex items-center gap-3 text-white/90">
                 <Users className="w-5 h-5 text-green-400" />
-                <span className="text-lg">200+ Hackers and 2000+ Participants</span>
+                <span className="text-lg">
+                  200+ Hackers and 2000+ Participants
+                </span>
               </div>
             </div>
 
@@ -80,12 +82,14 @@ const HeroSection = () => {
                 part of building it.
               </p>
             </div>
-            <PrimaryButton
-              text="
+            <a href="#partners">
+              <PrimaryButton
+                text="
                 Partner With Us
            
            "
-            />
+              />
+            </a>
 
             {/*  Can use in the future */}
             {/* <div className="max-w-sm mx-auto">

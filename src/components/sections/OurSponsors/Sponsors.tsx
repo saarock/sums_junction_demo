@@ -17,6 +17,7 @@ import {
   Heart,
 } from "lucide-react";
 import UnderLineStyle from "../../UnderLineStyle";
+import PrimaryButton from "../../PrimaryButton";
 
 const Sponsors = () => {
   return (
@@ -83,12 +84,7 @@ const Sponsors = () => {
               </div>
 
               <a href="mailto:manish.khadka@cogknit.io?subject=Challenge Owner">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-xl px-12 py-6 rounded-xl border-0 hover:scale-105 transition-all duration-300 font-semibold"
-                >
-                  Contact Us
-                </Button>
+                <PrimaryButton text="Contact Us"></PrimaryButton>
               </a>
             </div>
 
@@ -122,12 +118,7 @@ const Sponsors = () => {
               </div>
 
               <a href="mailto:manish.khadka@cogknit.io?subject=Event Sponsor">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-xl px-12 py-6 rounded-xl border-0 hover:scale-105 transition-all duration-300 font-semibold"
-                >
-                  Contact Us
-                </Button>
+                <PrimaryButton text="Contact Us"></PrimaryButton>
               </a>
             </div>
 
@@ -170,12 +161,7 @@ const Sponsors = () => {
               </div>
 
               <a href="mailto:avinash.dhital@cogknit.io?subject=Event Sponsor">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-xl px-12 py-6 rounded-xl border-0 hover:scale-105 transition-all duration-300 font-semibold"
-                >
-                  Contact Us
-                </Button>
+                <PrimaryButton text="Contact Us"></PrimaryButton>
               </a>
             </div>
           </div>

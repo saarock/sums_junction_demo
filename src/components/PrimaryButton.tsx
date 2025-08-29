@@ -4,15 +4,16 @@ import { Button } from "./ui/button";
 interface ButtonProps {
   text: string;
   onClick?: () => void;
+  isMb? : boolean;
 }
 
-const PrimaryButton: React.FC<ButtonProps> = ({ text, onClick }) => {
+const PrimaryButton: React.FC<ButtonProps> = ({ text, onClick, isMb=true }) => {
   return (
-    <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+    <div className={`flex flex-col sm:flex-row gap-4 justify-center ${isMb ? 'mb-12 ' : "" }`}>
       <Button
         size="lg"
         onClick={onClick}
-        className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-10 py-4 rounded-xl border-0 hover:scale-105 transition-all duration-300 font-semibold"
+        className={`bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 `}
       >
         {text}
       </Button>

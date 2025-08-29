@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "../../ui/button";
 import UnderLineStyle from "../../UnderLineStyle";
 import { Phone, Mail } from "lucide-react";
+import PrimaryButton from "../../PrimaryButton";
 
 const BecomeASponsorSection = () => {
   return (
@@ -11,17 +12,12 @@ const BecomeASponsorSection = () => {
         <div className="absolute inset-0 rounded-3xl border border-white/20 shadow-[0_0_60px_-15px_rgba(139,92,246,0.7)] pointer-events-none"></div>
 
         <h2 className="text-4xl md:text-5xl mb-8 text-white font-bold">
-          Become a Sponsor
+          Got Questions Still? Want To Discuss In Detail?
         </h2>
         <UnderLineStyle />
 
-        <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto text-center mt-4">
-          Partner with us and showcase your brand to a global audience. Got
-          questions? Let’s talk in detail.
-        </p>
-
         {/* Contact Numbers */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mb-8">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-8 mb-8 mt-10">
           <a
             href="tel:+9779865995066"
             className="flex items-center gap-2 text-xl font-semibold text-white hover:text-purple-400 transition-colors"
@@ -37,17 +33,13 @@ const BecomeASponsorSection = () => {
         </div>
 
         {/* Contact Button */}
-        <Button
-          size="lg"
-          className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-xl px-12 py-6 rounded-xl border-0 hover:scale-105 transition-transform duration-300 font-semibold shadow-lg"
+
+        <a
+          href="mailto:manish.khadka@cogknit.io?subject=Sponsor"
+          className="flex items-center gap-2"
         >
-          <a
-            href="mailto:manish.khadka@cogknit.io?subject=Sponsor"
-            className="flex items-center gap-2"
-          >
-            <Mail className="w-5 h-5" /> Contact Us
-          </a>
-        </Button>
+          <PrimaryButton text="Contact Us"></PrimaryButton>
+        </a>
       </div>
     </section>
   );

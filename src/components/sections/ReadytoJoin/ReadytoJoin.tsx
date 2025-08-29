@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "../../ui/button";
 import { Input } from "../../ui/input";
 import UnderLineStyle from "../../UnderLineStyle";
+import PrimaryButton from "../../PrimaryButton";
 
 const ReadytoJoin = () => {
   return (
@@ -34,14 +35,16 @@ const ReadytoJoin = () => {
                   placeholder="Enter your email..."
                   className="w-80 input bg-white/10 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-purple-500"
                 />
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-lg px-8 py-6 rounded-xl border-0 hover:scale-105 transition-transform duration-300 font-semibold shadow-lg"
-                >
-                  <a href="mailto:manish.khadka@cogknit.io?subject=subscription">
+
+                <a href="mailto:manish.khadka@cogknit.io?subject=subscription">
+                  <PrimaryButton
+                    text="
                     Pre-Register Me
-                  </a>
-                </Button>
+                
+                "
+                isMb={false}
+                  />
+                </a>
               </div>
             </div>
           </div>
