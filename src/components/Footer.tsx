@@ -52,7 +52,6 @@ const Footer = () => {
                 JunctionX Kathmandu & InnoFest
               </h3>
               <div className="flex items-center gap-2 text-white/80 mb-6">
-                <Calendar className="w-5 h-5 text-purple-400" />
                 <span className="text-lg font-medium">
                   The premier tech hackathon coming to Nepal. Join us for 36
                   hours of innovation, collaboration and creation with the
