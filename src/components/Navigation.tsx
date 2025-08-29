@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
+import { Link as ScrollLink } from "react-scroll";
 import Logo from "./Logo";
+
+const navLinks = [
+  { label: "About", to: "home" },
+  { label: "Details", to: "about" },
+];
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,32 +23,29 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a
-              href="#home"
-              className="text-white/80 hover:text-white transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="#about"
-              className="text-white/80 hover:text-white transition-colors"
-            >
-              Details
-            </a>
-            <a
-              href="#partners"
-              className="text-white/80 hover:text-white transition-colors"
-            >
-              Sponsors
-            </a>
-            <a
-              href="#partners"
+            {navLinks.map((link) => (
+              <ScrollLink
+                key={link.to}
+                to={link.to}
+                smooth={true}
+                duration={500}
+                offset={-80} // adjust for fixed navbar
+                className="cursor-pointer text-white/80 hover:text-white transition-colors"
+              >
+                {link.label}
+              </ScrollLink>
+            ))}
+            <ScrollLink
+              to="partners"
+              smooth={true}
+              duration={500}
+              offset={-80}
               className="h-full"
             >
               <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0">
                 Partner with us
               </Button>
-            </a>
+            </ScrollLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -63,35 +66,30 @@ export function Navigation() {
           }`}
         >
           <div className="flex flex-col gap-6 px-6 py-6">
-            <a
-              href="#home"
-              className="text-white/80 hover:text-white text-lg transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </a>
-            <a
-              href="#about"
-              className="text-white/80 hover:text-white text-lg transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Details
-            </a>
-            <a
-              href="#partners"
-              className="text-white/80 hover:text-white text-lg transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Sponsors
-            </a>
-            <a
-              href="mailto:manish.khadka@cogknit.io?subject=Sponsor"
+            {navLinks.map((link) => (
+              <ScrollLink
+                key={link.to}
+                to={link.to}
+                smooth={true}
+                duration={500}
+                offset={-80}
+                className="cursor-pointer text-white/80 hover:text-white text-lg transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </ScrollLink>
+            ))}
+            <ScrollLink
+              to="partners"
+              smooth={true}
+              duration={500}
+              offset={-80}
               onClick={() => setIsOpen(false)}
             >
               <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 w-full">
                 Partner with us
               </Button>
-            </a>
+            </ScrollLink>
           </div>
         </div>
       </div>
