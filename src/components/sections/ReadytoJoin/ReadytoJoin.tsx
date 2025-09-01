@@ -1,14 +1,38 @@
-import React from "react";
-import { Button } from "../../ui/button";
+import React, { useState } from "react";
 import { Input } from "../../ui/input";
 import UnderLineStyle from "../../UnderLineStyle";
 import PrimaryButton from "../../PrimaryButton";
 
 const ReadytoJoin = () => {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+
+  // Simple email regex check
+  const isValidEmail = (value:string) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
+  const handleClick = (e:any) => {
+    if (!email) {
+      e.preventDefault();
+      setError("Please enter your email.");
+      return;
+    }
+    if (!isValidEmail(email)) {
+      e.preventDefault();
+      setError("Please enter a valid email address.");
+      return;
+    }
+    setError(""); // clear error if valid
+  };
+
+  const mailtoLink = `mailto:manish.khadka@cogknit.io?subject=Subscription&body=User email: ${encodeURIComponent(
+    email
+  )}`;
+
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Animated Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-ranimate-gradient-x opacity-30"></div>
+      <div className="absolute inset-0 bg-gradient-to-r animate-gradient-x opacity-30"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
@@ -25,27 +49,28 @@ const ReadytoJoin = () => {
                 Innovators and visionaries are locking in now! Spots are
                 limited—don’t let your hacking seat or InnoFest spotlight slip
                 away. Pre-register and we will reach out to you ASAP when
-                applications and tickets open!”
+                applications and tickets open!
               </p>
 
               {/* Email + Button Combined */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <Input
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email..."
-                  className="w-80 input bg-white/10 border border-white/30 text-white placeholder-white/60 focus:ring-2 focus:ring-purple-500"
+                  className="w-80 input bg-white/10 border border-white/30 text-white  focus:ring-2 focus:ring-purple-500"
                 />
 
-                <a href="mailto:manish.khadka@cogknit.io?subject=subscription">
-                  <PrimaryButton
-                    text="
-                    Pre-Register Me
-                
-                "
-                isMb={false}
-                  />
+                <a href={mailtoLink} onClick={handleClick}>
+                  <PrimaryButton text="Pre-Register Me" isMb={false} />
                 </a>
               </div>
+
+              {/* Show error message */}
+              {error && (
+                <p className="text-red-400 text-sm mt-3">{error}</p>
+              )}
             </div>
           </div>
         </div>
