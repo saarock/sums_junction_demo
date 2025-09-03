@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import PlatinumSponsors from "./PlatinumSponsors";
 import GoldSponsors from "./GoldSponsors";
 import BecomeASponsorSection from "./BecomeASponsorSection";
@@ -18,8 +18,38 @@ import {
 } from "lucide-react";
 import UnderLineStyle from "../../UnderLineStyle";
 import PrimaryButton from "../../PrimaryButton";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Sponsors = () => {
+  const cardsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (cardsRef.current) {
+      const allCards = cardsRef.current.querySelectorAll(".glass-card");
+
+      gsap.fromTo(
+        allCards,
+        { opacity: 0, y: 50, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          ease: "power3.out",
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: cardsRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }
+  }, []);
+
   return (
     <>
       <section
@@ -52,7 +82,10 @@ const Sponsors = () => {
           </div>
 
           {/* Sponsor Tiers */}
-          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+          <div
+            ref={cardsRef}
+            className="grid lg:grid-cols-3 gap-8 mb-16"
+          >
             {/* Challenge Owner */}
             <div className="glass-card rounded-3xl p-8 hover:scale-105 transition-all duration-300 border-2 border-purple-500/40">
               <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-6 mb-6">
@@ -165,6 +198,7 @@ const Sponsors = () => {
               </a>
             </div>
           </div>
+
           {/* Become a Sponsor Section */}
           <BecomeASponsorSection />
         </div>

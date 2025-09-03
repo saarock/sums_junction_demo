@@ -1,5 +1,10 @@
 import GradientColor from "../../GradientColor";
 import UnderLineStyle from "../../UnderLineStyle";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const PartnerLogos = () => {
   const orgName = [
@@ -15,9 +20,34 @@ const PartnerLogos = () => {
     },
   ];
 
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const cards = containerRef.current.querySelectorAll(".group");
+
+      gsap.fromTo(
+        cards,
+        { opacity: 0, y: 50, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 1,
+          ease: "power3.out",
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }
+  }, []);
+
   return (
     <>
-      {/* Partner Logos Section */}
       <section className="py-16 relative min-h-80 ">
         <GradientColor />
         <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-blue-900/5 to-black/0"></div>
@@ -29,27 +59,23 @@ const PartnerLogos = () => {
               </h2>
 
               <UnderLineStyle />
-              <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-8 lg:gap-12 max-w-4xl mx-auto mt-16">
-                {/* <div className="group cursor-pointer text-center">
-                  <div className="glass-card rounded-3xl p-6 md:p-8 hover:scale-105 transition-all duration-500">
-                    <div className="bg-white rounded-2xl p-6 mb-4 shadow-lg">
-                      <img
-                        src="/cogknit-logo.png"
-                        alt="Cogknit Logo"
-                        className="h-12 md:h-16 mx-auto object-contain filter contrast-125"
-                      />
-                    </div>
-                    <p className="text-white/80 text-lg">Cogknit Oy</p>
-                  </div>
-                </div> */}
-                {orgName.map((currentOrgDetails) => (
-                  <a href={currentOrgDetails.redirectURI} target="_blank">
+              <div
+                ref={containerRef}
+                className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-8 lg:gap-12 max-w-4xl mx-auto mt-16"
+              >
+                {orgName.map((currentOrgDetails, index) => (
+                  <a
+                    key={index}
+                    href={currentOrgDetails.redirectURI}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <div className="group cursor-pointer text-center">
                       <div className="glass-card rounded-3xl p-6 md:p-8 hover:scale-105 transition-all duration-500">
                         <div className="rounded-2xl p-4 mb-4">
                           <img
                             src={`${currentOrgDetails.imgSrc}`}
-                            alt="SUMS Nepal Logo"
+                            alt={`${currentOrgDetails.name} Logo`}
                             className="h-60 md:h-60 w-60 mx-auto object-contain filter contrast-125"
                           />
                         </div>

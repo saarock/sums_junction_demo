@@ -2,6 +2,11 @@ import { Award, Calendar, Globe, MapPin, Trophy } from "lucide-react";
 import EventSchedule from "../EventSchedule/EventSchedule";
 import ReadytoJoin from "../ReadytoJoin/ReadytoJoin";
 import UnderLineStyle from "../../UnderLineStyle";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const EventDetails = () => {
   const cards = [
@@ -66,6 +71,32 @@ const EventDetails = () => {
     },
   ];
 
+  const cardsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (cardsRef.current) {
+      const allCards = cardsRef.current.querySelectorAll(".group.glass-card");
+
+      gsap.fromTo(
+        allCards,
+        { opacity: 0, y: 50, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          ease: "power3.out",
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: cardsRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }
+  }, []);
+
   return (
     <>
       <section className="py-20 relative overflow-hidden">
@@ -88,7 +119,10 @@ const EventDetails = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-7xl mx-auto">
+            <div
+              ref={cardsRef}
+              className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-7xl mx-auto"
+            >
               {cards.map((card, idx) => (
                 <div
                   key={idx}

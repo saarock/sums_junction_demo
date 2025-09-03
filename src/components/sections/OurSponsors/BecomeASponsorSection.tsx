@@ -1,13 +1,43 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Button } from "../../ui/button";
 import UnderLineStyle from "../../UnderLineStyle";
-import { Phone, Mail } from "lucide-react";
+import { Phone } from "lucide-react";
 import PrimaryButton from "../../PrimaryButton";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const BecomeASponsorSection = () => {
+  const cardRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (cardRef.current) {
+      gsap.fromTo(
+        cardRef.current,
+        { opacity: 0, y: 50, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }
+  }, []);
+
   return (
     <section className="relative py-20">
-      <div className="glass-card rounded-3xl p-12 max-w-4xl mx-auto flex justify-center items-center flex-col relative overflow-hidden shadow-2xl">
+      <div
+        ref={cardRef}
+        className="glass-card rounded-3xl p-12 max-w-4xl mx-auto flex justify-center items-center flex-col relative overflow-hidden shadow-2xl"
+      >
         {/* Glow border effect */}
         <div className="absolute inset-0 rounded-3xl border border-white/20 shadow-[0_0_60px_-15px_rgba(139,92,246,0.7)] pointer-events-none"></div>
 
@@ -33,7 +63,6 @@ const BecomeASponsorSection = () => {
         </div>
 
         {/* Contact Button */}
-
         <a
           href="mailto:manish.khadka@cogknit.io?subject=Sponsor"
           className="flex items-center gap-2"

@@ -1,6 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function Countdown() {
   const [timeLeft, setTimeLeft] = useState({
@@ -9,6 +13,8 @@ export function Countdown() {
     minutes: 0,
     seconds: 0,
   });
+
+  const countdownRef = useRef(null);
 
   useEffect(() => {
     const targetDate = new Date("2025-12-05T00:00:00").getTime();
@@ -35,8 +41,32 @@ export function Countdown() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    if (countdownRef.current) {
+      gsap.fromTo(
+        countdownRef.current,
+        { opacity: 0, y: 50, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.5,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: countdownRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }
+  }, []);
+
   return (
-    <div className="rounded-3xl p-8 text-center transition-all duration-500 w-full mt-16 ">
+    <div
+      ref={countdownRef}
+      className="rounded-3xl p-8 text-center transition-all duration-500 w-full mt-16 "
+    >
       <div className="glass-card p-12 rounded-3xl">
         <div className="mb-6">
           <h3 className="text-orange-400 text-xl mb-2">

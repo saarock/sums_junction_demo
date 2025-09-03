@@ -1,14 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Input } from "../../ui/input";
 import UnderLineStyle from "../../UnderLineStyle";
 import PrimaryButton from "../../PrimaryButton";
 import { saveEmail } from "../../../services/emailServices";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ReadytoJoin = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState(""); // <-- Toast state
+  const cardRef = useRef<HTMLDivElement | null>(null);
 
   const isValidEmail = (value: string) =>
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
@@ -29,7 +34,7 @@ const ReadytoJoin = () => {
     setLoading(true);
     try {
       await saveEmail(email);
-      setToast("Pre-registered!"); 
+      setToast("Pre-registered!");
       setEmail(""); // clear input
     } catch (err) {
       setError("Failed to save email. Please try again.");
@@ -45,11 +50,36 @@ const ReadytoJoin = () => {
     }
   }, [toast]);
 
+  // GSAP animation for card
+  useEffect(() => {
+    if (cardRef.current) {
+      gsap.fromTo(
+        cardRef.current,
+        { opacity: 0, y: 50, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }
+  }, []);
+
   return (
     <section className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="glass-card rounded-3xl p-12 text-center relative overflow-hidden shadow-2xl">
+          <div
+            ref={cardRef}
+            className="glass-card rounded-3xl p-12 text-center relative overflow-hidden shadow-2xl"
+          >
             <div className="relative z-10">
               <h2 className="text-4xl md:text-5xl mb-8 text-white font-bold">
                 Ready to Join?
