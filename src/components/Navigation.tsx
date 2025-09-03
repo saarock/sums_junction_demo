@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
 import Logo from "./Logo";
+import PrimaryButton from "./PrimaryButton";
 
 const navLinks = [
   { label: "About", to: "home" },
@@ -42,9 +43,7 @@ export function Navigation() {
               offset={-80}
               className="h-full"
             >
-              <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0">
-                Partner with us
-              </Button>
+              <PrimaryButton text="Partner with us" isMb={false}/>
             </ScrollLink>
           </div>
 
@@ -86,9 +85,7 @@ export function Navigation() {
               offset={-80}
               onClick={() => setIsOpen(false)}
             >
-              <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 w-full">
-                Partner with us
-              </Button>
+              <PrimaryButton text="Partner with us" />
             </ScrollLink>
           </div>
         </div>

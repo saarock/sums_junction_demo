@@ -24,7 +24,9 @@ const PrimaryButton: React.FC<ButtonProps> = ({
         size="lg"
         onClick={onClick}
         disabled={disabled}
-        className={`bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 `}
+        className={`bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 
+          transform transition-transform duration-200 hover:scale-105 active:scale-95
+        `}
       >
         {text}
       </Button>
